@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Form Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        form {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        form legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: #fff;
+            padding:10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <!-- Form 1 -->
+        <form id="form1" onsubmit="submitForm(event, 'form1')">
+            <legend>Personal Information</legend>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            
+            <label for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" placeholder="Middle Name">
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Form 2 -->
+        <form id="form2" onsubmit="submitForm(event, 'form2')">
+            <legend>Contact Information</legend>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="State" required>
+            
+            <label for="pincode">Pin Code:</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Pin Code" required>
+            
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            
+            <label for="alternate">Alternate Number:</label>
+            <input type="tel" id="alternate" name="alternate" placeholder="Alternate Number">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Address" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Form 3 -->
+        <form id="form3" onsubmit="submitForm(event, 'form3')">
+            <legend>Education Information</legend>
+            <label for="school">School Name:</label>
+            <input type="text" id="school" name="school" placeholder="School Name" required>
+            
+            <label for="schoolPercentage">School Percentage:</label>
+            <input type="number" id="schoolPercentage" name="schoolPercentage" placeholder="School Percentage" required>
+            
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" placeholder="College Name" required>
+            
+            <label for="collegePercentage">College Percentage:</label>
+            <input type="number" id="collegePercentage" name="collegePercentage" placeholder="College Percentage" required>
+            
+            <label for="dreams">Dreams or Goals:</label>
+            <textarea id="dreams" name="dreams" placeholder="Dreams or Goals" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
